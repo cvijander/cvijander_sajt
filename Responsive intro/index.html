@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pravljenje responsive sajta</title>
+</head>
+<body>
+    
+    <h1>Pravljenje responsive sajta</h1>
+    <p>Da bi smo omogucili da nam sajt bude responsivan - tj da odgovara kako mobilnim telefonima, tabletima, tako i normalnim velicinama ekrana. Napravicemo u postojecem CSS -u kod koji shodno uslovu prepoznaje koja je velicina ekrana u pitanju i pokazuje kod tj prezentaciju koja je namenjena tom kodu.
+        Dakle u CSS-u unosimo promenljivu <code>@media(uslov){ i ovde unosimo koje zelimo da vrednosti se prikazuju razlicito 
+        }
+        <hr>
+        </code>
+      <h2>Smartphone</h2>
+      <p>Prilikom pravljenja sajta za smartphone koristimo uslov <code>media(max-width:500px){..}</code> </p>  
+
+      <h2>Tablet</h2>
+      <p>Kod pravljenja tableta,znamo da je rezolucija veca od mobilnog telefona dok je manja od klasicnog ekrana i zato koristimo sledece uslove </p>
+      <code>@media(min-width:501px) and (max-width:768px)  { ..}</code>
+      <br>
+      <h2>Normal</h2>
+      <p>Normal ili klasicna velicina ekrana tj pocetna rezolocija koja je koriscena na monitorima pocinje od 769 px i ide do 1200 px -takozvana velicina 1366*768(HD) </p>
+      <code>@media(min-width:769px) and (max-width:1200px) { .. }</code>
+     
+      <h2>Widescreen</h2>
+      <p>Widescreen tj ekran visoke rezolucije <code>@media (min-width:1201px) {.}</code></p>
+      <h2>Landscape</h2>
+      <p>Landscape je primer gde koristimo visinu kao uslov za postavku same rezolucije <code>@media(max-height:500px ){.}</code></p>
+        </p>
+</body>
+</html>
