@@ -66,5 +66,60 @@
         <p>Viewport width kao sto ime govori je sirina vidnog polja. Dakle koliko je nesto siroko prilikom gledanja
         <code>width:70vw</code> oznacava da je nesto samo 70 posto sirine vidnog polja. </p>
 
+        <br>
+        <hr>
+        <h2>Pravljenje responsivnog sajta koristeci col</h2>
+        <p>Kada zelimo da pravimo reponzivni sajt, mozemo se koristiti i floatom. Tj neophodno je da svaki artikal ili vec sekciju koju zelimo da koristimo ubacimo u novi div koja ima klasu col <code><div class="col"></code> i da taj sektor ili artikal ubacimo u tu klasu, zatim cemo u css vrsiti podesavanja vezano za col shodno velicinama ekrana.U css unosimo <code>.col { float:left; </code> cime omogucujemo da deo postane responzivan odnosno da prati levu stranu, tj da pluta. <br>
+            Neophodno je uz float koristiti i clearfix tehniku<code>..clearfix::before, .clearfix::after {
+    display: table;
+    content: " ";
+}
+
+.clearfix::after {
+    clear: both;
+}</code> pri cemu se klasa clearfi dodaje u sekciji iznad samog cola, tj kao njegov roditelj. 
+        </p>
+        <p>Sada u css delu unosimo tj pravimo media propertije shodno minimalnoj sirini ekrana i na osnovu toga vrsimo podele. Tako npr ako stavimo da je min-width:768px onda cemo dati uslov da je .col  width:50%. </p><code>@media (min-width:768px) {
+        .col {
+        width: 50%;
+    }   
+
+
+@media (min-width:992px){
+    
+    .col {
+        width: 33.333%;
+    }
+}
+
+@media (min-width:1200px) {
+   
+    .col {
+        width: 25%;
+    }
+}</code>. Dakle rekli smo sledece ako je min sirina 768 onda je width 50 posto, sledeca velicina je 992px i width je 33,333 posto,dok najveca je 1200px i delimo sadrzaj na 25% tj cetvrtine.
+<hr>
+<br>
+<h2>nth-of-type (an+b)</h2>
+<p>Prilikom koriscenja floata i responziva , cesto cemo se sustretati  da tekst nece da prodje tj da se postavi na pravo mesto, da bi smo to sigurno obezbedili koristicemo <code>.col:nth-of-type(an+b)</code> cime govorimo sledece. Ako zelimo da u rezoluciji tj gde smo rekli da je npr width bio 50 % onda je vrednost (2n+3), dok na sledecoj rezoluciji je (3n+4) (ako je nesto bilo 33.333% onda uzimamo prvi broj i stavljamo ga kao vrednost A , dok je vrednost B za jedan veci tj u ovom primeru 4, takodje moze se susresti kao i vrednost 1).<br>Procedura za izradu je sledeca u prvoj vrednosti postavljamo <code>section .col:nth-of-type(2n+3){
+        clear: both;
+}</code> dok tu istu vrednost u sledecoj rezoluciji proglasavamo clear:none  i unosimo odnogovarajucu vrednost. <code> section .col:nth-of-type(2n+3){
+        clear: none;
+    }
+
+    section .col:nth-of-type(3n+4){
+        clear: both;
+    }</code>Isti postupak ponavljamo i u vecoj tj sledecoj rezoluciji <code>section .col:nth-of-type(2n+3){
+        clear: none;
+    }
+
+    section .col:nth-of-type(3n+4){
+        clear: none;
+    }
+
+    section .col:nth-of-type(4n+5)
+    {
+        clear: both;
+    }</code> Cime smo se osigurali da u jednoj rezoluciji odgovara samo jedna velicina dok su ostale ne upotrebljene. </p> 
 </body>
 </html>
