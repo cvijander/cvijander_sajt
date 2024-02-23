@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox<title>
+</head>
+<body>
+    <h2>Flex kontenjer</h2>
+    <p>Flex kontenjer nema nikakvu slicnost sa botstrapovim konterenjom. Napravimo klasicno ..section, article itd i to napravimo 3 artikla koja se sastoje od artikla, naslov i neki tekst tj paragraf. U delu css stavljamo sledeci kod <code>section {
+         display flex} </code> i vidimo da su se nasi paragrafi spojili tj usmesto da budu jedan ispod drugog, sada se nalaze jedan poref drugog.Koliko god se povecavali ili smanjivali oni se nalaze jedan pored drugog. </p><hr>
+         Flex deluje na direktnu decu, dakle prvo je section pa artikal, tako da on deluje sa section na artikal tj na direktnu decu.
+         <h2>flex grow</h2>
+         Prilikom pravljenja sekcija ili da kazemo boxova i prebacivanja na flex (dakle display flex u delu roditelja) vidimo da nasa deca zauzimaju prostor koliko su min siroku. Dakle ako ima imaju 3 dece po 100px a prostor je 800, ostatak tj 500px ce biti prazan
+         Da bi smo to popunili radimo sledece: <code>flex-grow:1</code> pisemo u okviru nase postojece klase koja obuhvata svu decu i onda se sva deca jednako sire, ako zelimo npr da samo jedan od 3 dece popuni taj prostor onda se u njegov css pise flex-grow:1, i vidimo da je on onda uzeo ceo prostor dok ostala braca imaju onaj pocetni. Dakle po 100px. Dakle npr ako bismo zeleli da odnos velicine bude sledeci da je prvi velik 1 drugi duplo a treci 3 puta, onda se stavlja u box-1 flex-grow:1. zatim box-2 imace glrow2 itd i dolazimo da je ustvari cela povrsina podeljena na (1+2+3) dakle na 6 delova i shodno odnosu je data. 1|2|3.
+         <h2>Flex shrink</h2>
+         <p>Slicno kao flex grow, samo obrnuto delovanje, dakle stavljamo isto brojeve, ali veci broj oznacava da ce za isto vremenski period vise smanjiti nego drugi tj manji broj. Dakle ako imamo isto 3 boxa i isto broj 1,3,8 dakle zadnji box ce se vise smanjiti od prvog i od srednjeg, dok opet srednji ce se vise smanjiti od prvog.</p>
+         <h2>Flex wrap</h2>
+         <p>To je svojstvo koje dodeljujemo roditelju dakle unosimo kod roditelja flex-wrap:wrap i onda prilikom smanjivanja browsera trci tj zadnji clan se ne smanjuje vec se spusti ispod provog clana. Dakle kao da gledamo neku vrstu mobilne verzije browsera.</p> Sa druge strane ako stavimo flex-wrap :reverse, onda ce treci clan biti gore, dok se 1 i 2 clan spustaju ispod . Dakle kao da kazemo da se treci clan podigao na sledeci nivo. tj ispivao je.Ako dodje do jos suzivanja, onda ce kod reversa biti raspored 3,2,1 tj treci je najvisi pa ide 2 pa jedan, dok kod klasicnog wrapa bice 1,2,3 tj jedinica pa ispod dvojka i onda broj 3.
+         <h2>Flex basis</h2>
+         <p>Svojstvo koje se pise detetu, dakle kada zelimo da koristimo umesto min-widtha pri cemu prilikom smanjivanja nece doci do horizontalnog skrola i do smanjenja. I ostaje u okviru kontenjera</p>
+</body>
+</html>
