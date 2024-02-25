@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Povezivanje css sa htmlom</title>
+</head>
+<body>
+    <h1>Povezivanje CSS-a sa Html-om</h1>
+    <p>
+        When you add styles to Hypertext Markup Language (HTML), it's best to do your styling in a separate CSS file. When several HTML files use the same CSS, they'll have a consistent appearance. Plus, updating one CSS file is easier than having to update each individual HTML file.
+
+To reference the CSS file, you use the link element.
+
+link has two attributes, rel and href. rel is used to identify the resource type you're referencing, style sheet for style sheets. href is used to identify the path to the CSS file. If your CSS file was in the same folder as your HTML file and had the name style.css, you could use the following to reference it from your page:
+
+HTML
+
+Copy
+<link rel="stylesheet" href="style.css">
+Now you'll have at least two files, an .html file and a .css file. The previous example would have an HTML file that links to the CSS.
+
+HTML
+
+Copy
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>Welcome</h1>
+        <p>This is my site</p>
+    </body>
+</html>
+
+    </p>
+</body>
+</html>
