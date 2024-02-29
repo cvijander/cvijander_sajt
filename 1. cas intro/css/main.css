@@ -10,3 +10,18 @@ body {
     margin: 10px;
     
 }
+
+aside {
+    background-color: aqua;
+    color: white;
+    border: 1px solid black;
+}
+
+ul {
+    font-size: larger;
+
+}
+
+.tip {
+    font-style: italic;
+}

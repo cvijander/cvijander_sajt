@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css" href="css/main.css">
+    <title>Html atributi</title>
+</head>
+<body>
+    <p>HTML atributi pruzaju dodatne informacije o HTML elementima.</p>
+
+    <p>
+        <ul>
+            <li>Svi html elementi mogu da imaju atribute</li>
+            <li>Atributi pruzaju dodatne informacije o elementima</li>
+            <li>Atributi se uvek pisu na pocetku samog taga</li>
+            <li>Atributi obicno se pisu u obliku para koji cine ime/vrednost npr: ime="vrednost" </li>
+        </ul>
+       
+
+  <h2>Href atribut</h2>
+<p> A tag &lt;a&gt;  predstavlja hiperlink.Href atribut specificira URL stranice na koju pokazuje tj povezuje sam link:</p>
+<br>
+<p>Primer:</p>
+&lt; a href="https://www.google.com">Google</a&gt;</p> <br>
+
+<h2>Src atribut</h2>
+<p>Da bi smo postavili i povezili sliku sa nasim html stranicom, koristimo &lt;img&gt; tag. Pri cemu src atribut predstavlja putanju gde se sama slika nalazi. </p>
+
+<p>Primer:</p>
+<p> &lt;img src="img_girl.jpg" &gt;</p>
+<p>Postoje dva nacina da se specificira putanja do same slike koristeci src atribut.</p>
+<ul>
+    <ol>
+1. Absolutna putanja URL - Link ka slici koja se nalazi hostovana na nekom drugom sajtu.  Primer: src="https://www.google.com/images/img_girl.jpg".
+
+Upozorenje: Slike koje se preuzimaju sa drugih sajtova mogu biti predmet kopirajta. Ako nemamo dozvolu za koriscenje slike mozemo biti u postupku krsenja raznih autorskih prava vezano za slike. Takodje druga losija opcija jeste da  posto slika pripada "tudjem" serveru, takodje ne mozemo uticati na to ako se slika obrise ili primeni adresa itd.</ol>
+
+2.Relativna putanja URL - Pokazuje na putanju slike koja se nalazi na nasem serveru koji je povezan sa sajtom . Dakle prilikom povezivanja nismo u obavezi da url slike sadrzi i naziv domena, posto se nalazi na istom serveru. Ako url slike pocinje bez kose crte to oznacava da je se slika nalazi u istom folderu gde i trenutni dokument.Primer: src="img_girl.jpg".Dok sa druge strane, ako pocinje sa  / kosom crtom to znaci je relativna sa postojecom stranicom. Mozda cak u u nekom svom folderu.Primer: src="/images/img_girl.jpg".</ol>
+</ul>
+
+<div class="tip"><p> Savet: Najbolje je koristiti u vecini slucajeva relativnu putanju, cak i prilikom prelaska tj promene domena, nece doci do greske url.</p></div>
+
+<h2>Width i height atributi - sirina i visina</h2>
+<p>The <img> tag should also contain the width and height attributes, which specify the width and height of the image (in pixels):</p>
+
+Example
+<img src="img_girl.jpg" width="500" height="600">
+The alt Attribute
+The required alt attribute for the <img> tag specifies an alternate text for an image, if the image for some reason cannot be displayed. This can be due to a slow connection, or an error in the src attribute, or if the user uses a screen reader.
+
+Example
+<img src="img_girl.jpg" alt="Girl with a jacket">
+Example
+See what happens if we try to display an image that does not exist:
+
+<img src="img_typo.jpg" alt="Girl with a jacket">
+You will learn more about images in our HTML Images chapter.
+
+The style Attribute
+The style attribute is used to add styles to an element, such as color, font, size, and more.
+
+Example
+<p style="color:red;">This is a red paragraph.</p>
+You will learn more about styles in our HTML Styles chapter.
+
+The lang Attribute
+You should always include the lang attribute inside the <html> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.
+
+The following example specifies English as the language:
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+...
+</body>
+</html>
+Country codes can also be added to the language code in the lang attribute. So, the first two characters define the language of the HTML page, and the last two characters define the country.
+
+The following example specifies English as the language and United States as the country:
+
+<!DOCTYPE html>
+<html lang="en-US">
+<body>
+...
+</body>
+</html>
+You can see all the language codes in our HTML Language Code Reference.
+
+The title Attribute
+The title attribute defines some extra information about an element.
+
+The value of the title attribute will be displayed as a tooltip when you mouse over the element:
+
+Example
+<p title="I'm a tooltip">This is a paragraph.</p>
+We Suggest: Always Use Lowercase Attributes
+The HTML standard does not require lowercase attribute names.
+
+The title attribute (and all other attributes) can be written with uppercase or lowercase like title or TITLE.
+
+However, W3C recommends lowercase attributes in HTML, and demands lowercase attributes for stricter document types like XHTML.
+
+At W3Schools we always use lowercase attribute names.
+
+We Suggest: Always Quote Attribute Values
+The HTML standard does not require quotes around attribute values.
+
+However, W3C recommends quotes in HTML, and demands quotes for stricter document types like XHTML.
+
+Good:
+<a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+Bad:
+<a href=https://www.w3schools.com/html/>Visit our HTML tutorial</a>
+Sometimes you have to use quotes. This example will not display the title attribute correctly, because it contains a space:
+
+Example
+<p title=About W3Schools>
+ At W3Schools we always use quotes around attribute values.
+
+Single or Double Quotes?
+Double quotes around attribute values are the most common in HTML, but single quotes can also be used.
+
+In some situations, when the attribute value itself contains double quotes, it is necessary to use single quotes:
+
+<p title='John "ShotGun" Nelson'>
+Or vice versa:
+
+<p title="John 'ShotGun' Nelson">
+Chapter Summary
+All HTML elements can have attributes
+The href attribute of <a> specifies the URL of the page the link goes to
+The src attribute of <img> specifies the path to the image to be displayed
+The width and height attributes of <img> provide size information for images
+The alt attribute of <img> provides an alternate text for an image
+The style attribute is used to add styles to an element, such as color, font, size, and more
+The lang attribute of the <html> tag declares the language of the Web page
+The title attribute defines some extra information about an element
+
+    </p>
+</body>
+</html>
