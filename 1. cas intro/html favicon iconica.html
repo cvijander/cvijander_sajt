@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon iconica</title>
+</head>
+<body>
+   <h1>Favicon icona</h1>
+   <p>Favicon je mala slika koja se prikazuje sa leve strane pored naslova stranice u nasem browseru, mozemo je zamisliti kao mali logo koji se nas predstavlja.</p>
+    
+<h2>Dodavanje ikonice u HTML</h2>
+<p>Mozemo koristi bilo koju sliku koju zelimo za nas favicon (ikonicu). Mozemo i kreirati nasu ikonicu  na web sajtu kao sto je <a href="https://www.favicon.cc">favicon.cc</a> jednostavno koristeci meni sa bojama i prostor koji imamo 16x16 kockica.  </p>
+
+<p class="tip">Savet*: Ikonica je mala slika, tako da prilikom pravljenje ili vec postavljanja, potrebno je da slika bude sto jednostavnija i sa vecim kontrastom.</p>
+
+<h3>Postupak dodavanja ikonice u sajt</h3>
+<p>Da bi smo dodali ikonicu na nas sajt, snimicemo sliku u root folder naseg servera ili vec cemo kreirati folder koji ce sadrzati sve slike i nazvati ga "slike" ili vec "images" i snimicemo sliku u ovaj folder. Najcesce ime koje koristimo za ikonicu je "favicon.ico".
+
+Sledece je neophodno da dodamo &lt;link&gt; element na nas "index.html" fajl i to posle &lt;title&gt; elementa.
+
+<pre>
+  &lt;!DOCTYPE html&gt
+&lt;html&gt
+&lt;head&gt
+  &lt;title&gtMy Page Title&lt;/title&gt
+  &lt;link rel="icon" type="image/x-icon" href="/images/favicon.ico"&gt
+&lt;/head&gt
+&lt;body&gt
+
+&lt;h1&gtThis is a Heading&lt;/h1&gt
+&lt;p&gtThis is a paragraph.&lt;/p&gt
+
+&lt;/body&gt
+&lt;/html&gt
+</pre>
+
+<p>Nakon toga neophodno je snimiti "intex.html" stranicu i refreshovati browser. Ikonica bi trebalo da se pojavi pored naseg naslova sa leve strane.</p>
+
+<h3>Kod favicona</h3>
+<p>
+  &lt; rel="icon" type="image/x-icon" href="/images/favicon.ico"&gt;
+
+  
+</body>
+</html>
