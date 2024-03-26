@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Multiple Interfaces
+To implement multiple interfaces, separate them with a comma:
+
+ExampleGet your own C# Server
+interface IFirstInterface 
+{
+  void myMethod(); // interface method
+}
+
+interface ISecondInterface 
+{
+  void myOtherMethod(); // interface method
+}
+
+// Implement multiple interfaces
+class DemoClass : IFirstInterface, ISecondInterface 
+{
+  public void myMethod() 
+  {
+    Console.WriteLine("Some text..");
+  }
+  public void myOtherMethod() 
+  {
+    Console.WriteLine("Some other text...");
+  }
+}
+
+class Program 
+{
+  static void Main(string[] args)
+  {
+    DemoClass myObj = new DemoClass();
+    myObj.myMethod();
+    myObj.myOtherMethod();
+  }
+} 
+
+
+</body>
+</html>
